@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="checkbox" id="boxId" onclick="selOrNo()"/><span>全选/全不选</span><br>
+    <input type="checkbox" name="love"/>篮球<br/>
+    <input type="checkbox" name="love"/>足球<br/>
+    <input type="checkbox" name="love"/>排球<br/>
+    <input type="checkbox" name="love"/>乒乓球<br/>
+    <input type="checkbox" name="love"/>保龄球<br/>
+    <input type="checkbox" name="love"/>高尔夫<br/>
+    <input type="checkbox" name="love"/>斗地主<br/>
+    <input type="checkbox" name="love"/>打麻将<br/>
+    <input type="button" value="全选" onclick="selAll()"/>
+    <input type="button" value="全不选" onclick="selNo()"/>
+    <input type="button" value="反选" onclick="selOth()"/>
+</body>
+    <script type="text/javascript">
+        function selAll() {
+            var inputs = document.getElementsByName("love");
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                input.checked = true;
+            }
+        }
+        function selNo() {
+            var inputs = document.getElementsByName("love");
+            for (var i = 0; i < inputs.length; i++) {
+                var input= inputs[i];
+                input.checked = false;
+            }
+        }
+        function selOth() {
+            var inputs = document.getElementsByName("love");
+            for (var i = 0; i < inputs.length; i++) {
+                var input = inputs[i];
+                if (input.checked == false) {
+                    input.checked = true;
+                } else {
+                    input.checked = false;
+                }
+            }
+        }
+        function selOrNo() {
+            var input = document.getElementById("boxId");
+            if (input.checked === true) {
+                selAll();
+            } else {
+                selNo();
+            }
+        }
+    </script>
+</html>

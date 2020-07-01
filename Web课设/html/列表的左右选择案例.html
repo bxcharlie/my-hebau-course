@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        div.centent {
+            float: left;
+            text-align: center;
+            margin: 10px;
+        }
+        span {
+            display: block;
+            margin: 2px 2px;
+            padding: 4px 10px;
+            background: #990000;
+            cursor: pointer;
+            font-size: 12px;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="centent">
+        <select multiple="multiple" id="select1" style="width: 100px;height: 160px;">
+            <option value="1">选项1</option>
+            <option value="2">选项2</option>
+            <option value="3">选项3</option>
+            <option value="4">选项4</option>
+            <option value="5">选项5</option>
+            <option value="6">选项6</option>
+            <option value="7">选项7</option>
+            <option value="8">选项8</option>
+            <option value="9">选项9</option>
+            <option value="10">选项10</option>
+        </select>
+        <div>
+            <span id="add">选中添加到右边&gt;&gt;</span>
+            <span id="add_all">全部添加到右边&gt;&gt;</span>
+        </div>
+        <div class="centent">
+            <select multiple="multiple" id="select2" style="width: 100px;height: 160px;">
+                <option value="11">选项9</option>
+            </select>
+            <div>
+                <span id="remove">&it;&it;选中删除到左边</span>
+                <span id="remove_all">&it;&it;全部删除到左边</span>
+            </div>
+        </div>
+    </div>
+</body>
+    <script type="text/javascript">
+        document.getElementById("add").onclick = function () {
+            var select2 = document.getElementById("select2");
+            var select1 = document.getElementById("select1");
+            var options = select1.getElementsByTagName("option");
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.selected === true) {
+                    select2.appendChild(option);
+                    i--;
+                }
+            }
+
+        };
+        document.getElementById("add_all").onclick = function () {
+            var select2 = document.getElementById("select2");
+            var select1 = document.getElementById("select1");
+            var options = select1.getElementsByTagName("option");
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                select2.appendChild(option);
+                i--;
+            }
+
+        };
+        document.getElementById("remove").onclick = function () {
+            var select2 = document.getElementById("select2");
+            var select1 = document.getElementById("select1");
+            var options = select2.getElementsByTagName("option");
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                if (option.selected === true) {
+                    select1.appendChild(option);
+                    i--;
+                }
+            }
+        };
+        document.getElementById("remove_all").onclick = function () {
+            var select2 = document.getElementById("select2");
+            var select1 = document.getElementById("select1");
+            var options = select2.getElementsByTagName("option");
+            for (var i = 0; i < options.length; i++) {
+                var option = options[i];
+                    select1.appendChild(option);
+                    i--;
+            }
+        };
+    </script>
+</html>

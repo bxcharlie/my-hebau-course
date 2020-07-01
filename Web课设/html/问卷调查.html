@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #questionnaire {
+            background-image: url("https://wx2.sinaimg.cn/mw690/6c351711gy1g2io74l871j22y03swhdz.jpg");
+            padding: 15px;
+            margin: auto;
+            width: 900px;
+            text-align: center;
+            font-family: 微软雅黑;
+            box-shadow: 10px 10px 15px black;
+        }
+        h1 {
+            color: #4a7bbe;
+        }
+        hr {
+            width: 80%;
+            border: cornflowerblue 1px solid;
+            margin-bottom: 15px;
+        }
+        form {
+            text-align: left;
+            width: 80%;
+            margin: auto;
+        }
+        li {
+            margin: 10px 0;
+            color: white;
+        }
+        span {
+            color: white;
+        }
+        input {
+            margin: 10px;
+        }
+        input[type="text"],input[type = "tel"] {
+            width: 130px;
+            height: 10px;
+            font-size: 16px;
+            font-family: 微软雅黑;
+            border: 0px;
+            border-bottom: 1px solid;
+            outline: none;
+        }
+        /*input{*/
+        /*    color: white;*/
+        /*}*/
+        #btn {
+            text-align: center;
+        }
+        button {
+            width: 120px;
+            height: 40px;
+            background-color: darkcyan;
+            border: 0px;
+            color: white;
+            margin: 10px;
+            font-size: 18px;
+            font-family:微软雅黑;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #4a7bbe;
+        }
+        select {
+            width: 20em;
+            display: block;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="questionnaire">
+        <h1>关于青少年追星问卷调查</h1>
+        <hr>
+        <form method="post"  action="http://wwww.baidu.com" onsubmit="return check()">
+            <ol>
+                <li>您的性别是？</li>
+                    <label>
+                        <input type="radio" name="q1" value="q11" required/>
+                        <span>男</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" value="q12"required/>
+                        <span>女</span>
+                    </label>
+                <li>您的年龄段是？</li>
+                    <label>
+                    <input type="radio" name="q2" value="q21" required>
+                        <span>6-12岁</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="q22" required>
+                        <span>6-14岁</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="q23" required>
+                        <span>15-18岁</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="q24" required>
+                        <span>18-25岁</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="q25" required>
+                        <span>26-30岁</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="q2" value="q26" required>
+                        <span>30岁以上</span>
+                    </label>
+                <li>您所在的地区？</li>
+                    <lable>
+                        <iframe src="下拉列表的省市联动案例.html" frameborder="no" border="0" scrolling="no" style="width:200px;height:30px;"></iframe>
+                    </lable>
+                <li>您追星的原因？（可多选）</li>
+                    <label>
+                        <input type="checkbox" name="q3" value="q31"/>
+                        <span>才华</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q3" value="q32"/>
+                        <span>外貌出众</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q3" value="q33"/>
+                        <span>性格好</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q3" value="q34"/>
+                        <span>因为是杨洋</span>
+                    </label>
+                <li>您偏爱的明星性别？(可多选)</li>
+                    <label>
+                        <input type="checkbox" name="q4" value="p41"/>
+                        <span>男</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q4" value="p42"/>
+                        <span>女</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" name="q4" value="p43"/>
+                        <span>男女一样</span>
+                    </label>
+                <li>您喜欢杨洋么？</li>
+                <label>
+                    <input type="radio" name="q5" value="q51" required>
+                    <span>喜欢</span>
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="q52" required>
+                    <span>非常喜欢~</span>
+                </label>
+                <li>杨洋所在的城市？</li>
+                <select>
+                    <optgroup label="杨洋所在的城市？">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="天津">天津</option>
+                        <option value=深圳>深圳</option>
+                    </optgroup>
+                </select>
+            </ol>
+            <label><span>您的姓名</span>
+                <input type="text" name="name" required/>
+
+            </label>
+            <label><span>您的电话</span>
+                <input type="tel" name="tel" required/>
+            </label>
+            <div id="btn">
+                <button type="submit">提交问卷</button>
+            </div>
+        </form>
+    </div>
+</body>
+    <script type="text/javascript">
+        function checkBox(name) {
+            var j = 0;
+            var checkbox = document.getElementsByName(name);
+            for (var i = 0; i < checkbox.length; i++) {
+                if (checkbox[i].checked) {
+                    j++;
+                    break;
+                }
+            }
+            return j !== 0;
+
+        }
+        function check() {
+            var q3 = checkBox("q3");
+            if (q3 === false) {
+                alert("第三题最少选一个选项");
+                return false;
+            }
+            var q4 = checkBox("q4");
+            if (q4 === false) {
+                alert("第四题最少选一个选项");
+                return false;
+            }
+            return  true;
+        }
+    </script>
+</html>

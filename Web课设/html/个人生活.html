@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杨洋的个人生活</title>
+    <link rel="stylesheet" type="text/css" href="../css/final.css">
+</head>
+<style>
+    /*body {*/
+    /*    background: #cccccc;*/
+    /*}*/
+    /*p {*/
+    /*    color: #333;*/
+    /*    text-indent: 2em;*/
+    /*    font-size: 20px;*/
+    /*    text-align: center;*/
+    /*}*/
+   .junren {
+        width: 500px;
+        height: 712px;
+        margin-left: 100px;
+    }
+</style>
+<body>
+<div id="header" >
+    <div id="logo">
+        <a href="https://weibo.com/p/1006051815418641/home?from=page_100605&mod=TAB&is_all=1#place" target="_blank"><img src="../img/logo2.jpg"></a>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a  href="../主页.html">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+            <li><a href="演艺经历.html">演艺经历</a></li>
+            <li><a class="navActive" href="个人生活.html">个人生活</a></li>
+            <li><a href="注册界面.html">注册界面</a></li>
+            <li><a href="随机移动.html">随机移动</a></li>
+            <li><a href="弹出.html">弹出新窗口</a></li>
+            <li><a href="人物评价.html">人物评价</a></li>
+        </ul>
+    </div>
+</div>
+<div id= "clock">
+    <div class = "box1" id = "h"></div>
+    <div class = "box2">:</div>
+    <div class = "box1" id = "m"></div>
+    <div class = "box2">:</div>
+    <div class = "box1" id = "s"></div>
+</div>
+<script type="text/javascript">
+    //获取小时
+    var hour = document.getElementById("h");
+    //min
+    var minute = document.getElementById("m");
+    //second
+    var second = document.getElementById("s");
+
+    //what's the time now
+    function getCurrentTime(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+
+        if(h < 10)
+            h = "0" + h;
+        if(m < 10)
+            m = "0" + m;
+        if(s < 10)
+            s = "0" + s;
+
+        hour.innerHTML = h;
+        minute.innerHTML = m;
+        second.innerHTML = s;
+    }
+    //update the time per second]
+    setInterval("getCurrentTime()", 1000);
+</script>
+<div id="content">
+    <p><b>2015年9月3日为抗战胜利70周年纪念日，曾是一名军人的杨洋在微博发布一张自己曾经的军装敬礼照片并配词“敬礼”表示敬意;
+        9月6日，杨洋委托律师发出声明，杨洋的军人身份属实，这是杨洋的骄傲，是他珍贵的人生经历，不允许任何人恶意诋毁。</b></p>
+</div>
+    <div>
+        <img class="junren" src="https://gss3.bdstatic.com/-Po3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=c6a1aa13dd39b60059c307e588395e4f/77094b36acaf2edd70a3e019851001e9380193f4.jpg">
+        <img class="junren" src="https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=8499d1b5207f9e2f6438155a7e598241/7aec54e736d12f2e9c2acd3348c2d562853568b1.jpg">
+    </div>
+<div id="footer">
+    <p>
+        <a href="">Copyright|</a>
+        <a href="https://leetcode-cn.com/b_x_c/" target="_blank">友情链接|</a>
+        <a href="http://www.hebau.edu.cn/" target="_blank">联系我们|</a>
+        <a href="#top">回到顶部</a>
+    </p>
+    <p>
+        <a>京ICP备 000909号</a>
+        All rights(C) 2008-2019 Reserved.<br>
+        河北农业大学渤海校区计科1704鲍星灿 版权所有
+    </p>
+</div>
+</body>
+</html>

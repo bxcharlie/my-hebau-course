@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出新窗口</title>
+</head>
+<body>
+<span>编号：</span><input type="text" name="userNum" id="numId"/><br/>
+<span>姓名：</span><input type="text" name="userName" id="nameId"/><br/>
+<input type="button" value="选择" onclick="creat()"/>
+</body>
+    <script type="text/javascript">
+        function creat() {
+            window.open("child.html","child","width = 400,height = 200");
+        }
+    </script>
+</html>

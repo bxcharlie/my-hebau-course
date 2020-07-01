@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select id="select1" onchange="show(this.value)">
+        <option value="none">--请选择--</option>
+        <option value="北京">北京</option>
+        <option value="河北">河北</option>
+        <option value="河南">河南</option>
+        <option value="山东">山东</option>
+        <option value="山西">山西</option>
+    </select>
+    <select id="select2">
+    </select>
+</body>
+    <script type="text/javascript">
+        var arr = [];
+        arr[0] = ["北京","海淀区","昌平区","朝阳区","东城区","西城区","丰台区","通州区","怀柔区"];
+        arr[1] = ["河北","石家庄","秦皇岛","衡水","邯郸","邢台","保定","廊坊","唐山"];
+        arr[2] = ["河南","郑州","南阳","安阳","焦作","洛阳","濮阳","新乡"];
+        arr[3] = ["山东","济南","青岛","烟台","威海","日照","泰山","菏泽","济宁"];
+        function show(val) {
+            // alert("haha");
+            // alert(val);
+            var select2 = document.getElementById("select2");
+            var options = select2.getElementsByTagName("option");
+            for (var x = 0; x < options.length; x++) {
+                var option = options[x];
+                select2.removeChild(option);
+                x--;
+            }
+            for (var i = 0; i < arr.length; i++) {
+                var inarr = arr[i];
+                var inStr = inarr[0];
+                // alert(inStr);
+                if (val === inStr) {
+                    for (var j = 1; j < inarr.length; j++) {
+                        var value = inarr[j];
+                        // alert(value);
+                        var option2 = document.createElement("option");
+                        var text = document.createTextNode(value);
+                        option2.appendChild(text);
+                        select2.appendChild(option2);
+                    }
+                }
+            }
+        }
+
+    </script>
+</html>

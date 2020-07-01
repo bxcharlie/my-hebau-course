@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" type="text/css" href="css/final.css">
+    <script type="text/javascript" src = "js/final.js"></script>
+</head>
+<body onload="alert1()">
+    <a name="top"></a>
+        <iframe src="html/calendar.html" frameborder="no" border="0" scrolling="no" style="width:200px;height:450px;float: left">日历</iframe>
+
+    <div id="header" >
+        <div id="logo">
+            <a href="https://weibo.com/p/1006051815418641/home?from=page_100605&mod=TAB&is_all=1#place" target="_blank"><img src="img/logo2.jpg"></a>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a  class="navActive" href="#">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                <li><a href="html/演艺经历.html">演艺经历</a></li>
+                <li><a href="html/个人生活.html">个人生活</a></li>
+                <li><a href="html/注册界面.html">注册界面</a></li>
+                <li><a href="html/随机移动.html">随机移动</a></li>
+                <li><a href="html/弹出.html">弹出新窗口</a></li>
+                <li><a href="html/人物评价.html">人物评价</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id= "clock">
+        <div class = "box1" id = "h"></div>
+        <div class = "box2">:</div>
+        <div class = "box1" id = "m"></div>
+        <div class = "box2">:</div>
+        <div class = "box1" id = "s"></div>
+    </div>
+    <script type="text/javascript">
+        //获取小时
+        var hour = document.getElementById("h");
+        //min
+        var minute = document.getElementById("m");
+        //second
+        var second = document.getElementById("s");
+
+        //what's the time now
+        function getCurrentTime(){
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+
+            if(h < 10)
+                h = "0" + h;
+            if(m < 10)
+                m = "0" + m;
+            if(s < 10)
+                s = "0" + s;
+
+            hour.innerHTML = h;
+            minute.innerHTML = m;
+            second.innerHTML = s;
+        }
+        //update the time per second]
+        setInterval("getCurrentTime()", 1000);
+    </script>
+    <div id="banner">
+        <a href="https://weibo.com/p/1006051815418641/home?from=page_100605&mod=TAB&is_all=1#place" target="_blank"><img src="https://wx4.sinaimg.cn/mw690/6c351711gy1g2gbv9gv5tj23402c0qv7.jpg"></a>
+    </div>
+
+    <div id="content">
+        <div id="leftArticle">
+            <video id="videoControl" id="artid" style="width:800px;height:450px" controls="controls">
+                <source src="audio/522.mp4" type="video/mp4"/>
+                你的浏览器不支持video标签。
+            </video>
+<!--            <a id="artid" href="#"><img src="https://wx2.sinaimg.cn/mw1024/6c351711gy1g2gburr83uj22c02c07wj.jpg" alt=""/></a>-->
+            <h1><b>基本信息</b></h1>
+            <p><b>杨洋，1991年9月9日出生于上海，籍贯安徽合肥，毕业于中国人民解放军艺术学院2003级舞蹈系，中国内地影视男演员。
+                2007年，因在李少红版<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px" ><a href="https://baike.baidu.com/item/%E7%BA%A2%E6%A5%BC%E6%A2%A6/10578594" ><i><b>《红楼梦》</b></i></a></span>中饰演
+                少年贾宝玉而踏入影视圈。2010年，他凭借该剧获得BQ红人榜年度最佳新人奖。
+                2011年，杨洋参演个人首部电影<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E5%BB%BA%E5%85%9A%E4%BC%9F%E4%B8%9A/7664" ><i><b>《建党伟业》</b></i></a></span>。
+                2015年，因主演青春电影<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E5%B7%A6%E8%80%B3/12016950" ><i><b>《左耳》</b></i></a></span>和
+                冒险剧<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E7%9B%97%E5%A2%93%E7%AC%94%E8%AE%B0/6729311" ><i><b>《盗墓笔记》</b></i></a></span>而
+                获得更多关注；同年，其主演的青春励志剧<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E6%97%8B%E9%A3%8E%E5%B0%91%E5%A5%B3/16183458" ><i><b>《旋风少女》</b></i></a></span>取
+                得全国同时段电视剧收视冠军。
+                2016年2月7日，杨洋首次登上央视春晚并演唱歌曲<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E7%88%B6%E5%AD%90/19862504" ><i><b>《父子》</b></i></a></span>，
+                同年，凭借偶像剧<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E5%BE%AE%E5%BE%AE%E4%B8%80%E7%AC%91%E5%BE%88%E5%80%BE%E5%9F%8E/17698843" ><i><b>《微微一笑很倾城》</b></i></a></span>获得
+                第2届中国电视剧品质盛典年度人气剧星，而由其主演的爱情片<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E4%BB%8E%E4%BD%A0%E7%9A%84%E5%85%A8%E4%B8%96%E7%95%8C%E8%B7%AF%E8%BF%87/16325805" ><i><b>《从你的全世界路过》</b></i></a></span>
+                则取得了8.14亿人民币的票房成绩。
+                2017年，他主演的古装玄幻电影<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E4%B8%89%E7%94%9F%E4%B8%89%E4%B8%96%E5%8D%81%E9%87%8C%E6%A1%83%E8%8A%B1/8124998" ><i><b>《三生三世十里桃花》</b></i></a></span>票 房突破5.33亿人民币。
+                2018年2月15日，杨洋再次登上央视春晚演唱歌曲<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E6%88%91%E7%9A%84%E6%98%A5%E6%99%9A%E6%88%91%E7%9A%84%E5%B9%B4" ><i><b>《我的春晚我的年》</b></i></a></span>，同年，其主演的玄幻剧<span style="color: cornflowerblue;font-family: 微软雅黑;font-size: 15px"><a href="https://baike.baidu.com/item/%E6%AD%A6%E5%8A%A8%E4%B9%BE%E5%9D%A4%E4%B9%8B%E8%8B%B1%E9%9B%84%E5%87%BA%E5%B0%91%E5%B9%B4/22717040?fromtitle=%E6%AD%A6%E5%8A%A8%E4%B9%BE%E5%9D%A4&fromid=19469696" ><i><b>《武动乾坤》</b></i></a></span>播出</b>
+            </p>
+            <table  border="1" cellpadding="10" style="margin-left: 20px">
+                <tr align="center">
+                    <td colspan="4">
+                        杨洋基本信息
+                    </td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">中文名</td>
+                    <td class="itemValue">杨洋</td>
+                    <td class="itemName">经纪公司</td>
+                    <td class="itemValue">悦凯娱乐</td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">英文名</td>
+                    <td class="itemValue">YangYang</td>
+                    <td class="itemName">代表作品</td>
+                    <td class="itemValue">《武动乾坤》《左耳》等</td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">别名</td>
+                    <td class="itemValue">咩咩</td>
+                    <td class="itemName">毕业院校</td>
+                    <td class="itemValue">中国人民解放军艺术学院</td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">国籍</td>
+                    <td class="itemValue">中国</td>
+                    <td class="itemName">民族</td>
+                    <td class="itemValue">汉族</td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">星座</td>
+                    <td class="itemValue">处女座</td>
+                    <td class="itemName">血型</td>
+                    <td class="itemValue">AB型</td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">身高</td>
+                    <td class="itemValue">180cm</td>
+                    <td class="itemName">出生地</td>
+                    <td class="itemValue">上海</td>
+                </tr>
+                <tr align="center">
+                    <td class="itemName">出生日期</td>
+                    <td class="itemValue">1990/09/09</td>
+                    <td class="itemName">职业</td>
+                    <td class="itemValue">演员</td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="rightInfo">
+            <dl>
+                <div>
+                    <dt><b>吕老师看这里</b></dt>
+                    <dd><a href="zip/2017984060318鲍星灿.zip">压缩包下载</a></dd>
+                    <dd><a href="html/问卷调查.html">问卷调查</a></dd>
+                    <dd><a href="html/游戏.html">贪吃蛇小游戏</a></dd>
+                    <dd><a href="html/全选全不选.html">全选/全不选</a></dd>
+                    <dd><a href="html/列表的左右选择案例.html">列表的左右选择案例</a></dd>
+                    <dd><a href="html/动态添加子节点.html">操作DOM树</a></dd>
+                </div>
+                <div>
+                    <dt>标题2</dt>
+                    <dd><a href="#">这个超链接是空的</a></dd>
+                    <dd><a href="#">这个也是空的</a></dd>
+                    <dd><a href="#">这个也是空的</a></dd>
+                </div>
+                <div>
+                    <dt>标题3</dt>
+                    <dd><a href="#">空的</a></dd>
+                    <dd><a href="#">空的</a></dd>
+                    <dd><a href="#">空的</a></dd>
+                </div>
+            </dl>
+            <hr>
+            <ul type = "square">
+                <li>第一条</li>
+                <ol>
+                    <li>第一条</li>
+                    <li>第一条</li>
+                </ol>
+                <li>第二条</li>
+                <ol>
+                    <li>第二条</li>
+                    <li>第二条</li>
+                    <li>第二条</li>
+                </ol>
+            </ul>
+        </div>
+    </div>
+    <iframe src="audio/audio-master/audio.html" frameborder="no" border="0" scrolling="no" style="width:1349px;height:500px;position: center;margin-left: 60px"></iframe>
+    <div id="footer">
+        <p>
+            <a href="">Copyright|</a>
+            <a href="https://leetcode-cn.com/b_x_c/" target="_blank">友情链接|</a>
+            <a href="http://www.hebau.edu.cn/" target="_blank">联系我们|</a>
+            <a href="#top">回到顶部</a>
+        </p>
+        <p>
+            <a>京ICP备 000909号</a>
+            All rights(C) 2008-2019 Reserved.<br>
+            河北农业大学渤海校区计科1704鲍星灿 版权所有
+        </p>
+    </div>
+</body>
+</html>

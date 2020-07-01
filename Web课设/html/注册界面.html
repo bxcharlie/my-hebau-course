@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+</head>
+<body>
+<form action="随机移动.html" method="get" onsubmit="return run()">
+    <table border="1" cellpadding="10" width="50%">
+        <tr>
+            <td><span>用户名</span></td>
+            <td>
+                <input type="text" name="userName" id="nameid" onfocus="showName()" onblur="checkName()"/>
+                <span id="uspan"></span>
+            </td>
+        </tr>
+        <tr>
+            <td><span>密&nbsp;&nbsp;码</span></td>
+            <td>
+                <input type="password" id="pwd" name="password"/>
+            </td>
+        </tr>
+        <tr>
+            <td><span>确认密码</span></td>
+            <td>
+                <input type="password" id="repwd" name="repassword">
+            </td>
+        </tr>
+        <tr>
+            <td><span>邮&nbsp;&nbsp;箱</span></td>
+            <td>
+                <input type="text" id="emailid" name="email">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="注册">
+                <input type="reset">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script type="text/javascript">
+    function run() {
+        var username = document.getElementById("nameid");
+        var nameValue = username.value;
+        if (nameValue.trim() === " "){
+            alert("用户名不能为空");
+            return false;
+        }
+        var pwd = document.getElementById("pwd");
+        var pwdValue = pwd.value;
+        if (pwdValue.trim() === " "){
+            alert("密码不能为空");
+            return false;
+        }
+        if (pwdValue.length < 6) {
+            alert("密码长度至少是六位");
+            return false
+        }
+        var repwd = document.getElementById("repwd");
+        var repwdValue = repwd.value;
+        if (repwdValue !== pwdValue) {
+            alert("两次输入密码不一致");
+            return false;
+        }
+        var email = document.getEmementById("emailid");
+        const re = /^([a-zA-Z0-9_.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/i;
+        if(!(re.test(email.value))){
+            alert("错误");
+            return false;
+        }
+    }
+    function showName() {
+        var span = document.getElementById("uspan");
+        span.innerHTML = "请输入用户名";
+    }
+    function checkName() {
+        var input = document.getElementById("nameid");
+        var inputValue = input.value;
+        if ((inputValue === "")){
+            var uspan = document.getElementById("uspan");
+            uspan.innerHTML="用户名不能为空";
+        }
+    }
+</script>
+</html>

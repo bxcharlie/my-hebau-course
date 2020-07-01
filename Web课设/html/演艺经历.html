@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杨洋的演艺经历</title>
+    <link rel="stylesheet" type="text/css" href="../css/final.css">
+</head>
+<body>
+<div id="header" >
+    <div id="logo">
+        <a href="https://weibo.com/p/1006051815418641/home?from=page_100605&mod=TAB&is_all=1#place" target="_blank"><img src="../img/logo2.jpg"></a>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a  href="../主页.html">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+            <li><a class="navActive" href="演艺经历.html">演艺经历</a></li>
+            <li><a href="个人生活.html">个人生活</a></li>
+            <li><a href="注册界面.html">注册界面</a></li>
+            <li><a href="随机移动.html">随机移动</a></li>
+            <li><a href="弹出.html">弹出新窗口</a></li>
+            <li><a href="人物评价.html">人物评价</a></li>
+        </ul>
+    </div>
+</div>
+<div id= "clock">
+    <div class = "box1" id = "h"></div>
+    <div class = "box2">:</div>
+    <div class = "box1" id = "m"></div>
+    <div class = "box2">:</div>
+    <div class = "box1" id = "s"></div>
+</div>
+<script type="text/javascript">
+    //获取小时
+    var hour = document.getElementById("h");
+    //min
+    var minute = document.getElementById("m");
+    //second
+    var second = document.getElementById("s");
+
+    //what's the time now
+    function getCurrentTime(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+
+        if(h < 10)
+            h = "0" + h;
+        if(m < 10)
+            m = "0" + m;
+        if(s < 10)
+            s = "0" + s;
+
+        hour.innerHTML = h;
+        minute.innerHTML = m;
+        second.innerHTML = s;
+    }
+    //update the time per second]
+    setInterval("getCurrentTime()", 1000);
+</script>
+<div id="content">
+    <p><b>2009年10月3日，杨洋随《红楼梦》主创和主演在上海市长风公园银锄湖上首演
+        《红楼梦水上情景秀》（水上舞台版的《红楼梦》），其用舞蹈的形式再次演绎贾宝玉。
+        2010年，古装情感剧《红楼梦》正式播出，杨洋凭借对成年贾宝玉的演绎获得第四届“BQ红人榜”BQ推荐年度新人奖。
+        2011年2月，杨洋参演的青春励志偶像剧《青春旋律》播出，他在剧中饰演美甲师宁浩，并为该剧配唱主题曲《蒲公英》；
+        6月15日，他参演了为庆祝中国共产党建党90周年的献礼片《建党伟业》，并在片中饰演杨开慧的兄长杨开智。
+        2012年3月23日，爱情电影《饮食男女2012》上映，杨洋在片中饰演少年唐士哲；
+        6月22日至7月19日，梦幻水立方版《红楼梦》在北京国家游泳中心上演，时隔三年，杨洋再次用舞蹈的形式演绎贾宝玉；
+        9月21日，他出演的战争剧《战争不相信眼泪》首播，其颠覆挑战硬汉军人通讯员杜长友；
+        10月27日，都市时尚系列剧《刷新3+7》播出，杨洋出演《兵马俑与招财猫》单元并饰演了制药巨富独子何天泽。
+        2013年7月4日，其主演的古装历史情感剧《新洛神》首播，杨洋饰演文武双全爱憎分明的曹植；
+        7月，江湖传奇抗战剧《终极征服》首播，他在剧中饰演血性阳刚且重情重义的江湖浪子白念生；
+        11月15日，杨洋参与北京卫视首档军事题材明星真人秀节目《防务精英之星兵报到》的录制；
+        11月30日，主演根据九夜茴同名小说改编的都市青春言情剧《花开半夏》，他在剧中饰演富二代校草陆元。
+        2014年4月29日，杨洋与荣信达解除经纪合同，结束七年的合作关系；
+        7月10日，由他参演的网络剧《小时代之折纸时代》首播，其在剧中饰演顾里的表弟Neil；
+        随后，他还在民国情感剧《花灯满城》中饰演陈家二少爷陈飞渝。</b></p>
+</div>
+<div id="footer">
+    <p>
+        <a href="">Copyright|</a>
+        <a href="https://leetcode-cn.com/b_x_c/" target="_blank">友情链接|</a>
+        <a href="http://www.hebau.edu.cn/" target="_blank">联系我们|</a>
+        <a href="#top">回到顶部</a>
+    </p>
+    <p>
+        <a>京ICP备 000909号</a>
+        All rights(C) 2008-2019 Reserved.<br>
+        河北农业大学渤海校区计科1704鲍星灿 版权所有
+    </p>
+</div>
+</body>
+</html>

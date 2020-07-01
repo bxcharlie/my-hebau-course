@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        <li>北京</li>
+        <li id="sh">上海</li>
+        <li>天津</li>
+    </ul>
+    <br>
+    <input type="button" value="添加" onclick="run6()">
+    <input type="button" value="插入" onclick="run7()">
+</body>
+<script type="text/javascript">
+    function run6() {
+        var li = document.createElement("li");
+        var text = document.createTextNode("深圳");
+        li.appendChild(text);
+        var uls = document.getElementsByTagName("ul");
+        var ul = uls[0];
+        ul.appendChild(li);
+    }
+    function run7() {
+        var li = document.createElement("li");
+        var txt = document.createTextNode("广州");
+        li.appendChild(txt);
+        var uls = document.getElementsByTagName("ul");
+        var ul = uls[0];
+        var sh = document.getElementById("sh");
+        ul.insertBefore(li,sh);
+    }
+    document.getElementById("sh").ondblclick = function () {
+        var sh = document.getElementById("sh");
+        var ul = sh.parentNode;
+        ul.removeChild(sh);
+    }
+</script>
+</html>

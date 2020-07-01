@@ -1,0 +1,287 @@
+body, div, p, ul, li, dl, dt, dd, h1, a {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 微软雅黑;
+    background-image: url("https://wx1.sinaimg.cn/mw1024/6c351711gy1g2h8pssk60j22y03swb2f.jpg");
+}
+html,body {
+    /*background-color: black;*/
+}
+#header, #banner, #content, #footer {
+    /*background-color: #990000;*/
+    width: 1176px;
+    margin: 0 auto;
+}
+a {
+    text-decoration: none;
+}
+/*#header {*/
+/*    overflow: hidden;*/
+/*}*/
+body {
+    padding-top: 5px;
+}
+/*img {*/
+/*    border: none;*/
+/*    display: block;*/
+/*}*/
+#logo {
+    width: 125px;
+    height: 84px;
+    float: left;
+    background-color: #4a7bbe;
+    margin-top: 10px;
+}
+#logo a {
+    display: block;
+    width: 222px;
+    height: 84px;
+    text-decoration: none;
+}
+#logo a img {
+    display: block;
+    width: 125px;
+    height: 84px;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: cornflowerblue;
+}
+#nav {
+    width: 954px;
+    height: 84px;
+    float: left;
+    background-color: #111111;
+    margin: 10px;
+    margin-right: 0px;
+}
+#nav li {
+    float: left;
+    list-style: none;
+}
+#nav li a {
+    display: block;
+    padding: 0 20px;
+    height: 84px;
+    line-height: 84px;
+    text-align: center;
+    float: left;
+    font-size: 23px;
+    color: #eeeeee;
+    text-decoration: none;
+}
+#nav li a:hover {
+    color: #111111;
+    font-size: 24px;
+    background-color: #eeeeee;
+}
+#nav li .navActive {
+    background: linear-gradient(to bottom, #4a7bbe,#111111);
+}
+#clock {
+    width: 250px;
+    front-size: 500px;
+    float: left;
+    front-weight: blod;
+    text-align: center;
+    margin: 10px;
+    /*background-color: cornflowerblue;*/
+    height: 65px;
+    font-family: Cambria;
+    color-adjust: economy;
+
+}
+.box1 {
+    margin-right: 10px;
+    /*width: 100px;*/
+    height: 84px;
+    line-height: 100px;
+    float: left;
+    font-size: 23px;
+    line-height: 65px;
+}
+
+.box2 {
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+    font-size: 23px;
+    line-height: 65px;
+}
+.div1{
+    text-align:center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+#calendar{
+    /*display: inline;*/
+    width: 250px;
+    front-size: 100px;
+    /*float: left;*/
+    front-weight: blod;
+    text-align: center;
+    /*background: royalblue;*/
+    height: 175px;
+    margin-left: 550px;
+}
+
+button{
+    width:25%;
+    float:left;
+    height:40px;
+}
+
+#month{
+    width:50%;
+    float:left;
+
+}
+
+.everyday{
+    width:14%;
+    float:left;
+}
+#banner {
+    margin: 10px auto;
+    height: 580px;
+    float: left;
+}
+#banner a, #banner a img {
+    display: block;
+    width: 1176px;
+    height: 580px;
+    /*margin-top: 120px;*/
+    margin-left: 80px;
+}
+#content {
+    overflow: hidden;
+    background: #eaeaea;
+    font-size: 12px;
+    line-height: 24px;
+    /*margin-left: 0px;*/
+}
+#leftArticle {
+    float: left;
+    /*margin: 10px;*/
+    margin-right: 0px;
+    width: 765px;
+    font-size: 24px;
+}
+#leftArticle #artid, #leftArticle #artid audio {
+    display: block;
+    width: 765px;
+    height: 467px;
+}
+#leftArticle h1 {
+    margin: 20px 0;
+}
+#leftArticle h1  {
+    color: #990000;
+    /*text-decoration: none;*/
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 100%;
+}
+#leftArticle p {
+    color: #333;
+    text-indent: 2em;
+    font-size: 14px;
+    margin: 30px;
+}
+#leftArticle p a {
+    color: cornflowerblue;
+}
+#leftArticle p a:hover {
+    color: crimson;
+}
+
+#rightInfo {
+    float: left;
+    margin-left: 50px;
+    width: 300px;
+    height: 800px;
+}
+#rightInfo dl{
+    margin-bottom: 10px;
+}
+#rightInfo dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    text-indent: 20px;
+    background: #4a7bbe;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 15px;
+}
+#rightInfo dl dd {
+    height: 24px;
+    line-height: 24px;
+    color: #333;
+    background: #fff;
+    text-indent: 16px;
+    font-size: 13px;
+}#rightInfo dl dd:last-child {
+    margin-bottom: 20px;
+ }
+ #rightInfo dl dd a {
+     color: #333;
+     text-decoration: none;
+ }
+#rightInfo dl dd a:link {
+    text-decoration: none;
+}
+#rightInfo dl dd a:visited {
+    color: brown;
+    font-size: 18px;
+}
+#rightInfo dl dd a:hover {
+    color: chocolate;
+    font-size: 22px;
+}
+#rightInfo dl dd a:active {
+    color: aqua;
+    font-size: 30px;
+}
+ #footer {
+     /*background: #393838;*/
+     margin-top: 10px;
+     padding-top: 52px;
+     height: 52px;
+     line-height: 18px;
+     color: #ccc;
+     text-align: center;
+     font-size: 12px;
+     margin-bottom: 40px;
+ }
+ #footer a {
+     color: #ccc;
+     text-decoration: none;
+ }
+ #footer a:hover a:active{
+    text-decoration: underline;
+ }
+ #videoControl {
+     /*width: 800px;*/
+     /*height: 450px;*/
+     /*margin-left: 550px;*/
+ }
+.basic-info {
+    margin: 20px 0 35px;
+    *overflow: hidden;
+    clear: both;
+    background: url(https://bkssl.bdimg.com/static/wiki-lemma/widget/lemma_content/mainContent/basicInfo/img/basicInfo-bg_7819f20.png);
+}
+.itemName {
+    color: #555555;
+    font-size: 15px;
+    font-family: 仿宋;
+}
+.itemValue {
+    color: #000000;
+}

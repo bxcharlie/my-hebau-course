@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杨洋的社会活动</title>
+    <link rel="stylesheet" type="text/css" href="../css/final.css">
+</head>
+<body onload="run()">
+<div id="header" >
+    <div id="logo">
+        <a href="https://weibo.com/p/1006051815418641/home?from=page_100605&mod=TAB&is_all=1#place" target="_blank"><img src="../img/logo2.jpg"></a>
+    </div>
+    <div id="nav">
+        <ul>
+            <li><a href="../主页.html">主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+            <li><a href="演艺经历.html">演艺经历</a></li>
+            <li><a href="个人生活.html">个人生活</a></li>
+            <li><a href="注册界面.html">注册界面</a></li>
+            <li><a class="navActive" href="随机移动.html">随机移动</a></li>
+            <li><a href="弹出.html">弹出新窗口</a></li>
+            <li><a href="人物评价.html">人物评价</a></li>
+        </ul>
+    </div>
+</div>
+<div id= "clock">
+    <div class = "box1" id = "h"></div>
+    <div class = "box2">:</div>
+    <div class = "box1" id = "m"></div>
+    <div class = "box2">:</div>
+    <div class = "box1" id = "s"></div>
+</div>
+<script type="text/javascript">
+    //获取小时
+    var hour = document.getElementById("h");
+    //min
+    var minute = document.getElementById("m");
+    //second
+    var second = document.getElementById("s");
+
+    //what's the time now
+    function getCurrentTime(){
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+
+        if(h < 10)
+            h = "0" + h;
+        if(m < 10)
+            m = "0" + m;
+        if(s < 10)
+            s = "0" + s;
+
+        hour.innerHTML = h;
+        minute.innerHTML = m;
+        second.innerHTML = s;
+    }
+    //update the time per second]
+    setInterval("getCurrentTime()", 1000);
+    function run() {
+        var img = document.getElementById("imgId");
+        img.style.top = Math.random()*300 + 'px';
+        img.style.left = Math.random()*500 + 'px';
+        window.setTimeout("run()",1000);
+    }
+</script>
+<img alt="" id="imgId" style="top: 100px;left: 100px;position: absolute" src="../img/2.jpg" height="200" width="100"/><br>
+<div id="footer">
+    <p>
+        <a href="">Copyright|</a>
+        <a href="https://leetcode-cn.com/b_x_c/" target="_blank">友情链接|</a>
+        <a href="http://www.hebau.edu.cn/" target="_blank">联系我们|</a>
+        <a href="#top">回到顶部</a>
+    </p>
+    <p>
+        <a>京ICP备 000909号</a>
+        All rights(C) 2008-2019 Reserved.<br>
+        河北农业大学渤海校区计科1704鲍星灿 版权所有
+    </p>
+</div>
+</body>
+</html>
